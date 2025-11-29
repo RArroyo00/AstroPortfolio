@@ -60,6 +60,7 @@ const techStack = [
     category: "Frameworks and Libraries",
     badges: [
       "https://img.shields.io/badge/Angular.js-%23000000.svg?style=for-the-badge&logo=angularjs&logoColor=white",
+      "https://img.shields.io/badge/Astro-%23000000.svg?style=for-the-badge&logo=astro&logoColor=white",
       "https://img.shields.io/badge/Bootstrap-%23000000.svg?style=for-the-badge&logo=bootstrap&logoColor=white",
       "https://img.shields.io/badge/Django-%23000000.svg?style=for-the-badge&logo=django&logoColor=white",
       "https://img.shields.io/badge/Express.js-%23000000.svg?style=for-the-badge&logo=express&logoColor=white",
@@ -143,14 +144,18 @@ const techStack = [
     </div>
 
     <!-- Tech Stack Grid -->
-    <div class="columns-1 md:columns-2 gap-10 text-secondary space-y-10 text-secondary">
+    <div
+      class="columns-1 md:columns-2 gap-10 text-secondary space-y-10 text-secondary"
+    >
       {
         techStack.map((group, index) => (
-          <div class="break-inside-avoid" data-aos="fade-up" data-aos-delay={index * 80}>
-            <h4 class="text-md font-bold tracking-wide">
-              {group.category}
-            </h4>
-            <br>
+          <div
+            class="break-inside-avoid"
+            data-aos="fade-up"
+            data-aos-delay={index * 80}
+          >
+            <h4 class="text-md font-bold tracking-wide">{group.category}</h4>
+            <br />
             <ul class="flex flex-wrap gap-2">
               {group.badges.map((badge) => (
                 <li>
