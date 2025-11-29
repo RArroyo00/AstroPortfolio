@@ -1,0 +1,32 @@
+---
+import MainHeader from "@/components/landing/MainHeader.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const home = import.meta.env.BASE_URL;
+---
+
+<BaseLayout>
+  <MainHeader />
+
+  <section class="bg-primary">
+    <div
+      class="px-8 2xl:max-w-7xl mx-auto py-6"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      data-aos-delay="500"
+    >
+      <div class="grid grid-cols-1 lg:grid-cols-4 text-secondary gap-6 text-lg">
+        <p class="text-2xl lg:col-span-3 lg:text-4xl lg:col-start-2 lg:mt-48 lg:indent-32 leading-snug">
+  This page doesn’t exist.
+  <span class="block text-secondary/70">Or maybe it moved somewhere else.</span>
+  <a
+    href={home}
+    class="inline-block mt-4 font-semibold text-accent underline underline-offset-4 hover:text-accent/70 transition-colors"
+  >
+    Go back home
+  </a>
+</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
