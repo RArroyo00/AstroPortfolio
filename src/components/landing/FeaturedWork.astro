@@ -1,0 +1,218 @@
+---
+import Contact from "./Contact.astro";
+
+const techStack = [
+  {
+    category: "Project Management and Methodologies",
+    badges: [
+      "https://img.shields.io/badge/Agile-%23000000.svg?style=for-the-badge&logo=agile&logoColor=white",
+      "https://img.shields.io/badge/Jira-%23000000.svg?style=for-the-badge&logo=jira&logoColor=white",
+      "https://img.shields.io/badge/Asana-%23000000.svg?style=for-the-badge&logo=asana&logoColor=white",
+      "https://img.shields.io/badge/Microsoft%20Project-%23000000.svg?style=for-the-badge&logo=microsoft-project&logoColor=white",
+    ],
+  },
+  {
+    category: "Networking and Protocols",
+    badges: [
+      "https://img.shields.io/badge/TCP/IP-%23000000.svg?style=for-the-badge&logo=cisco&logoColor=white",
+      "https://img.shields.io/badge/HTTP%2FHTTPS-%23000000.svg?style=for-the-badge&logo=http&logoColor=white",
+      "https://img.shields.io/badge/RESTful%20APIs-%23000000.svg?style=for-the-badge&logo=rest&logoColor=white",
+      "https://img.shields.io/badge/GraphQL-%23000000.svg?style=for-the-badge&logo=graphql&logoColor=white",
+    ],
+  },
+  {
+    category: "Cloud Computing",
+    badges: [
+      "https://img.shields.io/badge/AWS-%23000000.svg?style=for-the-badge&logo=amazon-aws&logoColor=white",
+      "https://img.shields.io/badge/Google%20Cloud-%23000000.svg?style=for-the-badge&logo=google-cloud&logoColor=white",
+      "https://img.shields.io/badge/Microsoft%20Azure-%23000000.svg?style=for-the-badge&logo=microsoft-azure&logoColor=white",
+    ],
+  },
+  {
+    category: "Programming Languages",
+    badges: [
+      "https://img.shields.io/badge/BrightScript-%23000000.svg?style=for-the-badge&logo=roku&logoColor=white",
+      "https://img.shields.io/badge/C%23-%23000000.svg?style=for-the-badge&logo=csharp&logoColor=white",
+      "https://img.shields.io/badge/C++-%23000000.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white",
+      "https://img.shields.io/badge/CSS-%23000000.svg?style=for-the-badge&logo=csswizardry&logoColor=white",
+      "https://img.shields.io/badge/Compose_Multiplatform-%23000000.svg?style=for-the-badge&logo=jetpackcompose&logoColor=white",
+      "https://img.shields.io/badge/Dart-%23000000.svg?style=for-the-badge&logo=dart&logoColor=white",
+      "https://img.shields.io/badge/Go-%23000000.svg?style=for-the-badge&logo=go&logoColor=white",
+      "https://img.shields.io/badge/Gradle-%23000000.svg?style=for-the-badge&logo=gradle&logoColor=white",
+      "https://img.shields.io/badge/HTML5-%23000000.svg?style=for-the-badge&logo=html5&logoColor=white",
+      "https://img.shields.io/badge/Java-%23000000.svg?style=for-the-badge&logo=java&logoColor=white",
+      "https://img.shields.io/badge/JavaScript-%23000000.svg?style=for-the-badge&logo=javascript&logoColor=white",
+      "https://img.shields.io/badge/Kotlin-%23000000.svg?style=for-the-badge&logo=kotlin&logoColor=white",
+      "https://img.shields.io/badge/Kotlin_Multiplatform-%23000000.svg?style=for-the-badge&logo=kotlin&logoColor=white",
+      "https://img.shields.io/badge/LaTeX-%23000000.svg?style=for-the-badge&logo=latex&logoColor=white",
+      "https://img.shields.io/badge/Markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white",
+      "https://img.shields.io/badge/PHP-%23000000.svg?style=for-the-badge&logo=php&logoColor=white",
+      "https://img.shields.io/badge/Python-%23000000?style=for-the-badge&logo=python&logoColor=white",
+      "https://img.shields.io/badge/Rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white",
+      "https://img.shields.io/badge/Ruby-%23000000.svg?style=for-the-badge&logo=ruby&logoColor=white",
+      "https://img.shields.io/badge/SceneGraph-%23000000.svg?style=for-the-badge&logo=roku&logoColor=white",
+      "https://img.shields.io/badge/Shell_Script-%23000000.svg?style=for-the-badge&logo=gnu-bash&logoColor=white",
+      "https://img.shields.io/badge/Swift-%23000000.svg?style=for-the-badge&logo=swift&logoColor=white",
+      "https://img.shields.io/badge/TypeScript-%23000000.svg?style=for-the-badge&logo=typescript&logoColor=white",
+    ],
+  },
+  {
+    category: "Frameworks and Libraries",
+    badges: [
+      "https://img.shields.io/badge/Angular.js-%23000000.svg?style=for-the-badge&logo=angularjs&logoColor=white",
+      "https://img.shields.io/badge/Bootstrap-%23000000.svg?style=for-the-badge&logo=bootstrap&logoColor=white",
+      "https://img.shields.io/badge/Django-%23000000.svg?style=for-the-badge&logo=django&logoColor=white",
+      "https://img.shields.io/badge/Express.js-%23000000.svg?style=for-the-badge&logo=express&logoColor=white",
+      "https://img.shields.io/badge/FastAPI-000000?style=for-the-badge&logo=fastapi&logoColor=white",
+      "https://img.shields.io/badge/Flutter-%23000000.svg?style=for-the-badge&logo=flutter&logoColor=white",
+      "https://img.shields.io/badge/Google%20Maps-%23000000.svg?style=for-the-badge&logo=googlemaps&logoColor=white",
+      "https://img.shields.io/badge/Google%20Pay-%23000000.svg?style=for-the-badge&logo=googlepay&logoColor=white",
+      "https://img.shields.io/badge/Google_Wallet-%23000000.svg?style=for-the-badge&logo=googlepay&logoColor=white",
+      "https://img.shields.io/badge/In_App_Purchases-%23000000.svg?style=for-the-badge&logo=googlepay&logoColor=white",
+      "https://img.shields.io/badge/Jetpack%20Compose-%23000000.svg?style=for-the-badge&logo=jetpackcompose&logoColor=white",
+      "https://img.shields.io/badge/jQuery-%23000000.svg?style=for-the-badge&logo=jquery&logoColor=white",
+      "https://img.shields.io/badge/React-%23000000.svg?style=for-the-badge&logo=react&logoColor=white",
+      "https://img.shields.io/badge/Riverpod-%23000000.svg?style=for-the-badge&logo=riverpod&logoColor=white",
+      "https://img.shields.io/badge/Spring_Boot-%23000000.svg?style=for-the-badge&logo=springboot&logoColor=white",
+      "https://img.shields.io/badge/Vue.js-%23000000.svg?style=for-the-badge&logo=vue.js&logoColor=white",
+      "https://img.shields.io/badge/Wear_OS-%23000000.svg?style=for-the-badge&logo=google&logoColor=white",
+      "https://img.shields.io/badge/WordPress_API-%23000000.svg?style=for-the-badge&logo=wordpress&logoColor=white",
+    ],
+  },
+  {
+    category: "Databases",
+    badges: [
+      "https://img.shields.io/badge/Amazon%20DynamoDB-%23000000?style=for-the-badge&logo=Amazon%20DynamoDB&logoColor=white",
+      "https://img.shields.io/badge/Couchbase-%23000000?style=for-the-badge&logo=couchbase&logoColor=white",
+      "https://img.shields.io/badge/Drift_DB-%23000000.svg?style=for-the-badge&logo=sqlite&logoColor=white",
+      "https://img.shields.io/badge/Firebase-%23000000?style=for-the-badge&logo=Firebase&logoColor=white",
+      "https://img.shields.io/badge/Microsoft%20SQL%20Server-%23000000?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white",
+      "https://img.shields.io/badge/MongoDB-%23000000.svg?style=for-the-badge&logo=mongodb&logoColor=white",
+      "https://img.shields.io/badge/MySQL-%2300000f.svg?style=for-the-badge&logo=mysql&logoColor=white",
+      "https://img.shields.io/badge/Postgres-%23000000.svg?style=for-the-badge&logo=postgresql&logoColor=white",
+      "https://img.shields.io/badge/SQLite-%23000000.svg?style=for-the-badge&logo=sqlite&logoColor=white",
+      "https://img.shields.io/badge/Supabase-%23000000.svg?style=for-the-badge&logo=supabase&logoColor=white",
+    ],
+  },
+  {
+    category: "CICD",
+    badges: [
+      "https://img.shields.io/badge/GitLab%20CI%2FCD-%23000000.svg?style=for-the-badge&logo=gitlab&logoColor=white",
+      "https://img.shields.io/badge/GitHub%20Actions-%23000000.svg?style=for-the-badge&logo=github&logoColor=white",
+      "https://img.shields.io/badge/Harness-%23000000.svg?style=for-the-badge&logo=harness&logoColor=white",
+      "https://img.shields.io/badge/Jenkins-%23000000.svg?style=for-the-badge&logo=jenkins&logoColor=white",
+    ],
+  },
+  {
+    category: "Other Tools",
+    badges: [
+      "https://img.shields.io/badge/Adobe-%23000000.svg?style=for-the-badge&logo=adobe&logoColor=white",
+      "https://img.shields.io/badge/Adobe_Creative_Cloud-%23000000?style=for-the-badge&logo=adobe-creative-cloud&logoColor=white",
+      "https://img.shields.io/badge/Adobe_Dreamweaver-%23000000?style=for-the-badge&logo=Adobe%20Dreamweaver&logoColor=white",
+      "https://img.shields.io/badge/Adobe_Illustrator-%23000000?style=for-the-badge&logo=adobe%20illustrator&logoColor=white",
+      "https://img.shields.io/badge/Adobe_Photoshop-%23000000?style=for-the-badge&logo=adobe%20photoshop&logoColor=white",
+      "https://img.shields.io/badge/Android_Studio-%23000000.svg?style=for-the-badge&logo=android-studio&logoColor=white",
+      "https://img.shields.io/badge/Apple-000000.svg?style=for-the-badge&logo=apple&logoColor=white",
+      "https://img.shields.io/badge/Arduino-%23000000?style=for-the-badge&logo=Arduino&logoColor=white",
+      "https://img.shields.io/badge/Audacity-%23000000?style=for-the-badge&logo=audacity&logoColor=white",
+      "https://img.shields.io/badge/Bitbucket-%23000000.svg?style=for-the-badge&logo=bitbucket&logoColor=white",
+      "https://img.shields.io/badge/Canva-%23000000.svg?style=for-the-badge&logo=Canva&logoColor=white",
+      "https://img.shields.io/badge/Discord-%23000000.svg?style=for-the-badge&logo=discord&logoColor=white",
+      "https://img.shields.io/badge/Eclipse_IDE-%23000000.svg?style=for-the-badge&logo=eclipse-ide&logoColor=white",
+      "https://img.shields.io/badge/Figma-%23000000.svg?style=for-the-badge&logo=figma&logoColor=white",
+      "https://img.shields.io/badge/Firebase_App_Distribution-%23000000.svg?style=for-the-badge&logo=firebase&logoColor=white",
+    ],
+  },
+];
+---
+
+<section class="bg-primary py-20">
+  <div class="px-8 2xl:max-w-7xl mx-auto">
+    <!-- Section Titles -->
+    <div class="mb-10 space-y-2">
+      <div class="h-0.5 bg-secondary" data-aos="fade-up"></div>
+      <h3
+        class="text-secondary text-xs font-medium"
+        data-aos="fade-up"
+        data-aos-delay="50"
+      >
+        <span>my</span>
+        <span class="font-bold">technical</span>
+        <span class="italic">stack</span>
+      </h3>
+    </div>
+
+    <!-- Tech Stack Grid -->
+    <div class="columns-1 md:columns-2 gap-10 text-secondary space-y-10 text-secondary">
+      {
+        techStack.map((group, index) => (
+          <div class="break-inside-avoid" data-aos="fade-up" data-aos-delay={index * 80}>
+            <h4 class="text-md font-bold tracking-wide">
+              {group.category}
+            </h4>
+            <br>
+            <ul class="flex flex-wrap gap-2">
+              {group.badges.map((badge) => (
+                <li>
+                  <img src={badge} alt={group.category} class="h-7" />
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="bg-primary">
+  <div class="px-8 2xl:max-w-7xl mx-auto py-6">
+    <div class="mt-32 space-y-2">
+      <div
+        class="h-0.5 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+      </div>
+      <h3
+        class="text-secondary text-xs font-medium"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
+        <span>Clean, </span>
+        <span class="font-bold">scalable solutions</span>
+        <span class="italic">no extra complexity.</span>
+      </h3>
+      <div
+        class="h-1.5 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
+      </div>
+      <div class="h-3 bg-secondary" data-aos="fade-up" data-aos-duration="2500">
+      </div>
+      <div class="h-6 bg-secondary" data-aos="fade-up" data-aos-duration="3000">
+      </div>
+      <div
+        class="h-12 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
+      </div>
+      <div
+        class="h-24 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        data-aos-delay="150"
+      >
+      </div>
+    </div>
+    <div>
+      <ul
+        class="lg:items-center flex justify-end w-full gap-3 relative text-xs"
+      >
+        <Contact />
+      </ul>
+    </div>
+  </div>
+</section>

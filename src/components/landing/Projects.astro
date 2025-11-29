@@ -1,0 +1,83 @@
+---
+// Define the array of projects directly in the frontmatter script.
+const otherprojects = [
+  {
+    url: "https://www.globant.com/",
+    title: "Software Designer · Mobile Technical Lead — Globant",
+    description:
+      "Lead engineer in charge of mobile strategy, architecture, and technical direction for high-impact applications across multiple teams. Responsible for defining standards, ensuring code quality, and guiding complex feature development in large-scale projects.",
+  },
+  {
+    url: "https://www.disneyexperience.com/", // puedes cambiarlo por un link más adecuado
+    title: "Mobile Technical Lead — Disney Parks, Experiences and Products",
+    description:
+      "Technical leader for Android development in one of Disney’s key digital ecosystems. Oversaw architectural decisions, performance optimizations, and critical feature launches used by millions of users worldwide.",
+  },
+  {
+    url: "https://www.globant.com/",
+    title: "Android Tech Lead — Globant Engineering Studio",
+    description:
+      "Led the Android development efforts for multiple global clients, delivering stable, scalable and maintainable applications. Mentored engineers, reviewed architectures, and drove technical excellence across distributed teams.",
+  },
+  {
+    url: "https://revistakuadro.com/",
+    title: "Web Manager & Tech Contributor — Revista Kuadro",
+    description:
+      "Responsible for the continuous development, maintenance, and optimization of the magazine’s digital platform for over eight years, ensuring stability, performance and modern design practices.",
+  },
+];
+
+// Function to calculate `data-aos-duration` based on index
+function calculateAosDuration(index) {
+  return 1500 + index * 500; // Example: Increment duration by 500ms for each project
+}
+---
+
+<section class="bg-primary">
+  <div class="px-8 2xl:max-w-7xl mx-auto py-32">
+    <div class="space-y-2">
+      <!-- Section Title and Decorative Elements -->
+      <div
+        class="h-0.5 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+      </div>
+      <h3
+        class="text-secondary text-base font-medium"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
+        <span>main</span>
+        <span class="font-bold">experiences</span>
+      </h3>
+    </div>
+
+    <ul
+      class="mx-auto grid grid-cols-1 sm:grid-cols-2 text-secondary lg:grid-cols-4 items-start gap-6 mt-32"
+      role="list"
+    >
+      {
+        otherprojects.map((project, index) => (
+          <li
+            class="flow-root h-full "
+            data-aos="fade-up"
+            data-aos-duration={calculateAosDuration(index)}
+          >
+            <a href={project.url}>
+              <div class="h-full flex flex-col justify-between">
+                <div>
+                  <p class="group-hover:text-secondary/70 text-secondary text-9xl font-black lg:rotate-90 xl:-translate-x-32 lg:-translate-x-20 lg:mb-8 xl:mb-0  lg:pb-8">
+                    0{index + 1}.
+                  </p>
+                  <p class="italic shrink-0">{project.title}</p>
+                  <p class="text-xl  mt-3 indent-9">{project.description}</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
