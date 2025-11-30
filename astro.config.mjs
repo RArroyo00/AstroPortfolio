@@ -2,6 +2,8 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 import sitemap from "@astrojs/sitemap";
+import solid from "@astrojs/solid-js";
+
 export default defineConfig({
    vite: {
     plugins: [tailwindcss()],
@@ -10,5 +12,5 @@ export default defineConfig({
   site: 'https://rarroyo00.github.io',
   base: '/AstroPortfolio/',
   compressHTML: true,
-  integrations: [sitemap()]
+  integrations: [sitemap(),solid()]
 });
