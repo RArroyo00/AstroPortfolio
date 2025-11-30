@@ -1,15 +1,14 @@
 @import "tailwindcss";
+
 @theme {
   --font-sans: Geist, sans-serif;
 
-  --color-primary: #f7f3ee;     
-  --color-secondary: #3a352f;
 
-   --badge-filter: 
-    invert(10%) sepia(20%) saturate(300%) hue-rotate(330deg)
-    brightness(0.8) contrast(1);
+  --color-primary: #F7F6F4;
+  --color-secondary: #3F3A35;
 }
 
 * {
   font-variant-numeric: tabular-nums;
 }
+
