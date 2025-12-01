@@ -14,6 +14,8 @@ const GlobeComponent = () => {
     "Canada",
     "Colombia",
     "England",
+    "France",
+    "Germany",
     "Ireland",
     "Italy",
     "Mexico",

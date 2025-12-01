@@ -1,13 +1,12 @@
 ---
 import Contact from "./Contact.astro";
 
-
 const BADGE_BG = "F7F6F4";
 const LOGO_COLOR = "3F3A35";
 
 function badge(label, logo) {
   return `https://img.shields.io/badge/${encodeURIComponent(
-    label
+    label,
   )}-%23${BADGE_BG}.svg?style=for-the-badge&logo=${logo}&logoColor=${LOGO_COLOR}`;
 }
 
@@ -135,30 +134,28 @@ const techStack = [
     ],
   },
 ];
-
 ---
 
 <section class="bg-primary">
-    <div class="px-8 2xl:max-w-7xl mx-auto py-6">
-        <div class="space-y-2">
-            <!-- Section Title and Decorative Elements -->
-            <div
-                class="h-0.5 bg-secondary"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-            >
-            </div>
-            <h3
-                class="text-secondary text-base font-medium"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-            >
-                 <span>my</span>
-        <span class="font-bold">technical</span>
+  <div class="px-8 2xl:max-w-7xl mx-auto py-6">
+    <div class="space-y-2">
+      <!-- Section Title and Decorative Elements -->
+      <div
+        class="h-0.5 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+      </div>
+      <h3
+        class="text-secondary text-base font-medium"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
+        <span>My</span>
+        <span class="font-bold">echnical</span>
         <span class="italic">stack</span>
-            </h3>
-        </div>
-
+      </h3>
+    </div>
 
     <!-- Tech Stack Grid -->
     <div
