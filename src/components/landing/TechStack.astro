@@ -1,0 +1,110 @@
+---
+import Contact from "./Contact.astro";
+import techData, { badge } from "../../data/techstack.json";
+
+const techStack = techData.map((group) => ({
+  category: group.category,
+  badges: group.badges.map(([label, logo]) => badge(label, logo)),
+}));
+---
+
+<section class="bg-primary">
+  <div class="px-8 2xl:max-w-7xl mx-auto py-6">
+    <div class="space-y-2">
+      <!-- Section Title and Decorative Elements -->
+      <div
+        class="h-0.5 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+      </div>
+      <h3
+        class="text-secondary text-base font-medium"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
+        <span>My</span>
+        <span class="font-bold">technical</span>
+        <span class="italic">stack</span>
+      </h3>
+    </div>
+
+    <!-- Tech Stack Grid -->
+    <div
+      class="columns-1 md:columns-2 gap-10 text-secondary space-y-10 text-secondary py-4"
+    >
+      {
+        techStack.map((group, index) => (
+          <div
+            class="break-inside-avoid"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            data-aos-delay={index * 80}
+          >
+            <h4 class="text-sm font-bold tracking-wide">{group.category}</h4>
+            <br />
+            <ul class="flex flex-wrap gap-2">
+              {group.badges.map((badge) => (
+                <li>
+                  <img src={badge} alt={group.category} class="h-7 badge" />
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="bg-primary">
+  <div class="px-8 2xl:max-w-7xl mx-auto py-6">
+    <div class="mt-32 space-y-2">
+      <div
+        class="h-0.5 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+      </div>
+      <h3
+        class="text-secondary text-xs font-medium"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
+        <span>Clean, </span>
+        <span class="font-bold">scalable solutions</span>
+        <span class="italic">no extra complexity.</span>
+      </h3>
+      <div
+        class="h-1.5 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
+      </div>
+      <div class="h-3 bg-secondary" data-aos="fade-up" data-aos-duration="2500">
+      </div>
+      <div class="h-6 bg-secondary" data-aos="fade-up" data-aos-duration="3000">
+      </div>
+      <div
+        class="h-12 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
+      </div>
+      <div
+        class="h-24 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        data-aos-delay="150"
+      >
+      </div>
+    </div>
+    <div>
+      <ul
+        class="lg:items-center flex justify-end w-full gap-3 relative text-xs"
+      >
+        <Contact />
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,26 +1,18 @@
 ---
-
+const contactLinks = [
+  { name: "GitHub", url: "https://github.com/RArroyo00" },
+  { name: "Instagram", url: "https://instagram.com/rulo_coffn" },
+  { name: "LinkedIn", url: "https://linkedin.com/in/raul-ae" },
+  { name: "Email", url: "mailto:isc.rarroyo@gmail.com" }
+];
 ---
 
-<li>
-    <a
-        href="https://github.com/RArroyo00"
-        class="hover:text-secondary/80 text-secondary">GitHub</a
-    >
-</li><li>
-    <a
-        href="https://instagram.com/rulo_coffn"
-        class="hover:text-secondary/80 text-secondary">Instagram</a
-    >
-</li>
-<li>
-    <a
-        href="https://linkedin.com/in/raul-ae"
-        class="hover:text-secondary/80 text-secondary">LinkedIn</a
-    >
-</li><li>
-    <a
-        href="mailto:isc.rarroyo@gmail.com"
-        class="hover:text-secondary/80 text-secondary">Email</a
-    >
-</li>
+ {
+    contactLinks.map(link => (
+      <li>
+        <a href={link.url} class="text-secondary hover:text-secondary/80 hover:underline underline-offset-4">
+          {link.name}
+        </a>
+      </li>
+    ))
+  }
